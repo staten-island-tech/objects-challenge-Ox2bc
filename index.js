@@ -1,4 +1,4 @@
-const Caroline = {
+/* const Caroline = {
     name: "Caroline",
     dob: 2004,
     graduated: false,
@@ -38,7 +38,7 @@ const Caroline = {
    const calculator = {
       add: 1+2,
       subtract: 1-2
-  }; 
+  };  */
 
   const presidents = [
     { name: "Donald Trump", terms: 1, party: "R" },
@@ -57,11 +57,35 @@ const Caroline = {
    
   //Challenge Questions
   //1) Filter all presidents, leaving only the Democratic ones
-   
+  const democrat = presidents.filter(president => president.party === "D");
+
+  console.log(democrat);
   //2)Filter all presidents to leave only one term Republican presidents HINT use If statement
-   
+  let oneRepublicans = []
+  for (let i = 0; i < presidents.length; i++) {
+      if (presidents[i].terms <= 1 && presidents[i].party === "R") {
+          oneRepublicans.push(presidents[i]);
+      }
+  }
+  console.log(oneRepublicans);
   //3) return only the last three presidents
-   
+  console.log(presidents[0])
+  console.log(presidents[1])
+  console.log(presidents[2])
   //4) log all dems who served 2 terms. HINT use chain filter, filter and slice
-   
+  let twoDemocrats = []
+  for (let i = 0; i < presidents.length; i++) {
+      if (presidents[i].terms >= 2 && presidents[i].party === "D") {
+          twoDemocrats.push(presidents[i]);
+      }
+  }
+  console.log(twoDemocrats[0]);
+  console.log(twoDemocrats[1]);
+  console.log(twoDemocrats[2]);
   //BONUS write a script to check if LBJ was a 2 term president. IF he was then alert("LBJ served two terms") else alert "LBJ was one and done"
+  if (presidents[10].terms >= 2){
+      alert("LBJ served two terms")
+  }
+  else{
+      alert("LBJ was one and done")
+  }
