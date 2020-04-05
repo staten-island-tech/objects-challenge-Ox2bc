@@ -76,12 +76,10 @@
   let twoDemocrats = []
   for (let i = 0; i < presidents.length; i++) {
       if (presidents[i].terms >= 2 && presidents[i].party === "D") {
-          twoDemocrats.push(presidents[i]);
+          twoDemocrats.push(presidents[i]); 
       }
   }
-  console.log(twoDemocrats[0]);
-  console.log(twoDemocrats[1]);
-  console.log(twoDemocrats[2]);
+  console.log(twoDemocrats);
   //BONUS write a script to check if LBJ was a 2 term president. IF he was then alert("LBJ served two terms") else alert "LBJ was one and done"
   if (presidents[10].terms >= 2){
       alert("LBJ served two terms")
